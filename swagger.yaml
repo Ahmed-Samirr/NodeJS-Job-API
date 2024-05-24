@@ -124,11 +124,11 @@ paths:
               allOf:
               - $ref: '#/components/schemas/LoginRequest'
               - example:
-                  email: ahmedsamir1132@gmail.com
-                  password: Ahmedzek12
+                  email: ahmedsamir@gmail.com
+                  password: AhmedSamir
             example:
-              email: ahmedsamir1132@gmail.com
-              password: Ahmedzek12
+              email: ahmedsamir@gmail.com
+              password: AhmedSamir
         required: true
       responses:
         '200':
@@ -152,12 +152,12 @@ paths:
               - $ref: '#/components/schemas/RegisterRequest'
               - example:
                   name: Mohamed Samir
-                  email: mohamedsamir1132@gmail.com
-                  password: Mohamed2
+                  email: mohamedsamir@gmail.com
+                  password: MohamedSamir
             example:
               name: Mohamed Samir
-              email: mohamedsamir1132@gmail.com
-              password: Mohamed2
+              email: mohamedsamir@gmail.com
+              password: MohamedSamir
         required: true
       responses:
         '200':
@@ -207,8 +207,8 @@ components:
         password:
           type: string
       example:
-        email: ahmedsamir1132@gmail.com
-        password: Ahmedzek12
+        email: ahmedsamir@gmail.com
+        password: AhmedSamir
     RegisterRequest:
       title: RegisterRequest
       required:
@@ -225,8 +225,8 @@ components:
           type: string
       example:
         name: Mohamed Samir
-        email: mohamedsamir1132@gmail.com
-        password: Mohamed2
+        email: mohamedsamir@gmail.com
+        password: MohamedSamir
   securitySchemes:
     bearer:
       type: http
