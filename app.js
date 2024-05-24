@@ -2,6 +2,9 @@ require('dotenv').config();
 require('express-async-errors');
 const express = require('express');
 const app = express();
+const swaggerUI = require('swagger-ui-express');
+const yaml = require('yamljs');
+const swaggerDocument = yaml.load('./swagger.yaml');
 
 //Route
 const authRouter = require('./routes/auth');
@@ -36,8 +39,9 @@ app.use(helmet());
 
 // routes
 app.get('/', (req, res) => {
-  res.send('jobs api');
+  res.send('<h1>Jobs API</h1> <a href="/api-docs">Swagger Docs</a>');
 });
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.use('/', authRouter);
 app.use('/', auth ,jobsRouter);
